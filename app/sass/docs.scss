@@ -1,0 +1,145 @@
+@import "vandor";
+// @import "sprite";
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin square($w) {
+  @include size($w, $w);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.bar.bar-positive{
+  background-color: rgba(darken($positive,20%),.8);
+}
+
+.ionic-icon {
+  $r0: 110px;
+  $r1: $r0 * 0.136;
+  $r2: $r0 * 0.432;
+  $color: #4b84fb;
+  @include square($r0 * 2);
+  border-radius: 50%;
+  border: 3px solid $color;
+  margin: 40vmin auto 0;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    @include square($r1 * 2);
+    position: absolute;
+    left: - $r1; top: $r0 - $r1;
+    background-color: $color;
+    border-radius: 50%;
+    transform-origin: $r0 + $r1 - 3px $r1;
+    animation: ionic-round 5s linear infinite;
+  }
+  &:after {
+    content: '';
+    display: block;
+    @include square($r2 * 2);
+    position: absolute;
+    left: $r0 - $r2;
+    top: $r0 - $r2;
+    background-color: darken($color, 10%);
+    border-radius: 50%;
+    animation: shinning 2s linear infinite alternate;
+  }
+}
+
+@-webkit-keyframes ionic-round {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes shinning {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .3;
+  }
+}
+
+.btn-start {
+  display: block;
+  margin: 40px auto 0;
+  width: 50vmin;
+}
+
+.icon-list {
+  @include square(20vmin);
+  line-height: 20vmin;
+  text-align: center;
+  float: left;
+  font-size: 3em;
+}
+
+.color-wrap {
+  padding-top: 45px;
+}
+
+.color-list {
+  @include square(33.3vmin);
+  line-height: 33.3vmin;
+  float: left;
+  font-size: 1.5em;
+  text-align: center;
+  &.bg-light{
+    background-color: $light;
+  }
+  &.bg-stable{
+    background-color: $stable;
+  }
+  &.bg-positive{
+    background-color: $positive;
+  }
+  &.bg-calm{
+    background-color: $calm;
+  }
+  &.bg-balanced{
+    background-color: $balanced;
+  }
+  &.bg-energized{
+    background-color: $energized;
+  }
+  &.bg-assertive{
+    background-color: $assertive;
+  }
+  &.bg-royal{
+    background-color: $royal;
+  }
+  &.bg-dark{
+    background-color: $dark;
+  }
+}
+
+.in-pane {
+  padding-top: 44px;
+  height: 100%;
+  .layer{
+    min-height: 25%;
+    &:nth-child(odd) {
+      background-color: #eee;
+    }
+  }
+  img {
+    display: block;
+    width: 95%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.box img{
+  max-width: 100%;
+}

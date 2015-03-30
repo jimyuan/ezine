@@ -1,0 +1,20 @@
+<ion-view view-title="eZine-1">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click="doSomething()">
+      <i class="ion-android-share-alt"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <ion-slide ng-repeat="slide in slides">
+        <div class="box">
+          <img ng-src="{{'img/'+slide+'.jpg'}}">
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+    <div class="padding animated fade-in-up-big">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, sint reiciendis vel, vitae perspiciatis doloremque id repellat cumque facere rerum blanditiis consectetur beatae deleniti, ab atque, placeat obcaecati veritatis aut quae deserunt itaque temporibus quaerat dignissimos ipsam. Natus iste cupiditate obcaecati neque ipsam qui vitae eaque dolore doloribus nesciunt vero quasi veniam placeat necessitatibus blanditiis, laudantium laboriosam, totam perferendis voluptatibus, fugiat est beatae id. Totam dolorem ipsa odit quo aperiam suscipit impedit, sequi dicta rerum reiciendis nulla recusandae blanditiis doloribus fugiat illum debitis consequuntur voluptatibus voluptate placeat cumque, nam, esse repellendus non. Ipsam rem, aspernatur quae ut maxime, saepe fuga!
+    </div>
+    <iframe style="width: 100vmin; height: 78vmin" src="http://player.youku.com/embed/XODY3MzcwNzYw" frameborder=0 allowfullscreen></iframe>
+  </ion-content>
+</ion-view>
