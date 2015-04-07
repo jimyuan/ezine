@@ -143,3 +143,20 @@ div {
 .box img{
   max-width: 100%;
 }
+
+.has-title {
+  padding: 40px;
+  padding-top: 85px;
+  text-align: justify;
+}
+
+.cols {
+  column-count: 2;
+  column-gap: 40px;
+  @media (orientation: portrait) {
+    height: 1024px - 45;
+  }
+  @media (orientation: landscape) {
+    height: 768px - 45;
+  }
+}

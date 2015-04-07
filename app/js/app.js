@@ -25,6 +25,10 @@
         controller: 'ZineCtrl',
         templateUrl: viewPath + '/zine.html'
       })
+      .state('iPad', {
+        url: '/iPad',
+        templateUrl: viewPath + '/iPad.html'
+      })
       .state('tabs', {
         url: "/tab",
         abstract: true,
